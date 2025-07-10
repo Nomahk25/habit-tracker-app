@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('assets/fonts/Poppins-Regular.ttf');
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #333333;
+  --card: #f0f0f0;
+  --done: #c8e6c9;
+}
+
+[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #f5f5f5;
+  --card: #2c2c2c;
+  --done: #388e3c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url('assets/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: var(--bg); /* fallback */
+  color: var(--text);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#theme-icon {
+  width: 28px;
+  height: 28px;
+}
+
+form {
+  display: flex;
+  margin-top: 20px;
+}
+
+form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+}
+
+form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+#habit-list {
+  margin-top: 20px;
+}
+
+.habit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.habit.done {
+  background-color: var(--done);
+  text-decoration: line-through;
+}
+
+.habit span {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.habit button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.habit img {
+  width: 22px;
+  height: 22px;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 1.5rem;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.calendar-day {
+  text-align: center;
+  padding: 10px;
+  background: var(--card);
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.calendar-day.active {
+  background: var(--done);
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form input, form button {
+    border-radius: 8px;
+  }
+
+  #calendar {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🌟 Habit Tracker</h1>
+      <button id="theme-toggle">
+        <img src="assets/icons/moon.svg" alt="Toggle Theme" id="theme-icon"/>
+      </button>
+    </header>
+
+    <form id="habit-form">
+      <input type="text" id="habit-name" placeholder="Enter new habit..." required />
+      <button type="submit">Add</button>
+    </form>
+
+    <div id="habit-list"></div>
+
+    <h2>📅 Calendar View</h2>
+    <div id="calendar"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
