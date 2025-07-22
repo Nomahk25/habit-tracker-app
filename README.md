@@ -5,6 +5,10 @@ Includes streak tracking, calendar visualization, and dark/light theme toggle.
 
 ---
 
+## 📸 Screenshot
+
+![Habit Tracker Screenshot](./habit_tracker.png)
+
 ## 🧩 Features
 
 - Add and track daily habits with streak counters 🔥  
